@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="urn:SoapManager" xmlns:tns="urn:SoapManager" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="SoapRequest" type="tns:SoapRequest"/>
+
+  <xs:element name="SoapRequestResponse" type="tns:SoapRequestResponse"/>
+
+  <xs:complexType name="SoapRequest">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:string" minOccurs="0"/>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="SecondName" type="xs:string" minOccurs="0"/>
+      <xs:element name="Age" type="xs:string" minOccurs="0"/>
+      <xs:element name="Sex" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SoapRequestResponse">
+    <xs:sequence>
+      <xs:element name="SoapAnswer" type="tns:sqlObject" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sqlObject">
+    <xs:sequence>
+      <xs:element name="age" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="secondName" type="xs:string" minOccurs="0"/>
+      <xs:element name="sex" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
