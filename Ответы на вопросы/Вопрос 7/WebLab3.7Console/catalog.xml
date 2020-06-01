@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/WebLab3/SoapManager?wsdl" uri="xml-resources/web-service-references/SoapManager/wsdl/localhost_8080/WebLab3/SoapManager.wsdl"/>
+    <system systemId="http://localhost:8080/WebLab3/SoapManager?xsd=1" uri="xml-resources/web-service-references/SoapManager/wsdl/localhost_8080/WebLab3/SoapManager.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WebLab3.7/SoapManager?wsdl" uri="xml-resources/web-service-references/SoapManager_1/wsdl/localhost_8080/WebLab3.7/SoapManager.wsdl"/>
+    <system systemId="http://localhost:8080/WebLab3.7/SoapManager?xsd=1" uri="xml-resources/web-service-references/SoapManager_1/wsdl/localhost_8080/WebLab3.7/SoapManager.xsd_1.xsd"/>
+</catalog>

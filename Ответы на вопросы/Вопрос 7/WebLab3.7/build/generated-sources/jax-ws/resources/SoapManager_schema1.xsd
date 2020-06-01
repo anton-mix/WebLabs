@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://Lab3/" xmlns:tns="http://Lab3/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Delete" type="tns:Delete"/>
+
+  <xs:element name="DeleteResponse" type="tns:DeleteResponse"/>
+
+  <xs:element name="Insert" type="tns:Insert"/>
+
+  <xs:element name="InsertResponse" type="tns:InsertResponse"/>
+
+  <xs:element name="MissFormatException" type="tns:MissFormatException"/>
+
+  <xs:element name="OutOfRangeException" type="tns:OutOfRangeException"/>
+
+  <xs:element name="Select" type="tns:Select"/>
+
+  <xs:element name="SelectResponse" type="tns:SelectResponse"/>
+
+  <xs:element name="Update" type="tns:Update"/>
+
+  <xs:element name="UpdateResponse" type="tns:UpdateResponse"/>
+
+  <xs:complexType name="Delete">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DeleteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MissFormatException">
+    <xs:sequence>
+      <xs:element name="faultInfo" type="tns:soapServiceFault" minOccurs="0"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="soapServiceFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OutOfRangeException">
+    <xs:sequence>
+      <xs:element name="faultInfo" type="tns:soapServiceFault" minOccurs="0"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Insert">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:string" minOccurs="0"/>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="SecondName" type="xs:string" minOccurs="0"/>
+      <xs:element name="Age" type="xs:string" minOccurs="0"/>
+      <xs:element name="Sex" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="InsertResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Update">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:string" minOccurs="0"/>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="SecondName" type="xs:string" minOccurs="0"/>
+      <xs:element name="Age" type="xs:string" minOccurs="0"/>
+      <xs:element name="Sex" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UpdateResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Select">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:string" minOccurs="0"/>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="SecondName" type="xs:string" minOccurs="0"/>
+      <xs:element name="Age" type="xs:string" minOccurs="0"/>
+      <xs:element name="Sex" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SelectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:sqlObject" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sqlObject">
+    <xs:sequence>
+      <xs:element name="age" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="secondName" type="xs:string" minOccurs="0"/>
+      <xs:element name="sex" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
